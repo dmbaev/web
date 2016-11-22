@@ -1,1 +1,222 @@
+/*menu*/
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 41px;
+    border-bottom: 1px solid #748182;
+    background: #1a1a1a;
+    z-index: 21;
+}
+    header > .logo {
+        width: 71px;
+        position: absolute;
+        padding: 3px;
+        z-index: 101;
+    }
 
+    header > .top_menu {
+        position: absolute;
+        width: 121px;
+        height: 41px;
+        border-left: 1px solid #748182;
+        right: 0px;
+    }
+
+        header > .top_menu > .text_menu {
+            font-size: 25px;
+            position: absolute;
+            top: 4px;
+            right: 40px;
+            color: white;
+        }
+
+        header > .top_menu > .btn_hamburger {
+            width: 21px;
+            height: 1px;
+            border: 1px solid #fff;
+            position: absolute;
+            top: 18px;
+            right: 5px;
+            background: #fff;
+            transition: .3s;
+        }
+
+            header > .top_menu > .btn_hamburger:before {
+                width: 21px;
+                height: 1px;
+                border: 1px solid #fff;
+                border-radius: 0 0 2px 2px;
+                content: "";
+                position: absolute;
+                top: 7.1px;
+                right: -1px;
+                background: #fff;
+                transition: .3s;
+            }
+
+            header > .top_menu > .btn_hamburger:after {
+                width: 21px;
+                height: 1px;
+                border: 1px solid #fff;
+                border-radius: 2px 2px 0 0;
+                content: "";
+                position: absolute;
+                top: -9.1px;
+                right: -1px;
+                background: #fff;
+                transition: .3s;
+            }
+
+    header > .menu {
+        display: block;
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        right: -300px;
+        width: 300px;
+        height: 100%;
+        margin-top: 42px;
+        background: #1a1a1a;
+    }
+
+    .nav{
+    margin: 0px auto;
+    height: 41px;
+    }
+
+     .nav > li > a{
+        color: #f8f5ed;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+     .nav > .active > a{
+         color: #d41b2b;
+     }
+
+     .nav > li{
+        transition: .3s;
+    }
+
+    .nav > li:hover{
+    background: #313131;
+    }
+
+    header > .check_menu:checked ~ .menu {
+        right: 0px;
+    }
+
+    header > .check_menu:checked ~ .top_menu > .btn_hamburger:after {
+        transform: rotate(45deg);
+        top: -2px;
+    }
+
+    header > .check_menu:checked ~ .top_menu > .btn_hamburger:before {
+        transform: rotate(-45deg);
+        top: -2px;
+    }
+
+    header > .check_menu:checked ~ .top_menu > .btn_hamburger {
+        border: none;
+        background: transparent;
+    }
+
+    header > .check_menu {
+        display: none;
+    }
+
+@media screen and (min-width: 700px) {
+    header > .menu {
+        margin-top: 0px;
+        right: 0;
+        z-index: 5;
+        width: 100%;
+        height: 41px;
+        border-left: none;
+       }
+
+    header > .logo {
+        left: 10%;
+        top: 5px;
+    }
+
+     .nav > li{
+        display: inline-block;
+        text-align: center;
+        line-height: 41px;
+        width:150px;
+        transition: .7s;
+    }
+
+    .nav{
+        padding: 0px;
+        width: 650px;
+        text-align: center;
+    }
+
+    .nav > li:before {
+        display: flex;
+        content: "";
+        margin: 0 auto;
+        width: 0px;
+        height: 3px;
+        margin-bottom: -3px;
+        transition: .7s;
+    }
+
+    .nav > li:hover{
+        letter-spacing:.1em;
+    }
+    .nav > li:hover:before{
+        display: flex;
+        content: "";
+        height:3px;
+        width: 100%;
+        background: #ff0000; 
+        margin-bottom: -3px;
+    }
+}
+
+/*mini version*/
+@media screen and (max-width: 699px) {
+    header > .menu {
+        background:rgba(0,0,0,0.91);
+        transition: right .3s;
+     
+    }
+
+    header > .check_menu:checked ~ .menu {
+        right: 0px;
+    }
+
+    .nav{
+    padding: 0px;
+
+    }
+
+    .nav > li{
+        display:block;
+        text-align: right;
+        list-style-type: none;
+        line-height: 50px;
+        padding-right: 3px;
+        border-bottom: 1px solid #748182;
+    }
+
+    nav>li:after{
+        display:block;
+        height:50px;
+        width:3px;
+    }
+
+    
+
+    .nav > li:hover{
+    border-right: 5px solid #d41b2b;
+    background: #2f353e;
+    }
+}
+/*end menu*/
