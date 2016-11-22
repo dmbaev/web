@@ -1,3 +1,10 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    padding-top: 41px;
+    min-height: calc(100vh - 66px );
+}
+
 /*menu*/
 header {
     position: fixed;
