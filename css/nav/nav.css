@@ -6,7 +6,7 @@ body{
 }
 
 /*menu*/
-header {
+nav {
     position: fixed;
     top: 0px;
     width: 100%;
@@ -15,14 +15,14 @@ header {
     background: #1a1a1a;
     z-index: 21;
 }
-    header > .logo {
+    nav > .logo {
         width: 71px;
         position: absolute;
         padding: 3px;
         z-index: 101;
     }
 
-    header > .top_menu {
+    nav > .top_menu {
         position: absolute;
         width: 121px;
         height: 41px;
@@ -30,7 +30,7 @@ header {
         right: 0px;
     }
 
-        header > .top_menu > .text_menu {
+        nav > .top_menu > .text_menu {
             font-size: 25px;
             position: absolute;
             top: 4px;
@@ -38,7 +38,7 @@ header {
             color: white;
         }
 
-        header > .top_menu > .btn_hamburger {
+        nav > .top_menu > .btn_hamburger {
             width: 21px;
             height: 1px;
             border: 1px solid #fff;
@@ -49,7 +49,7 @@ header {
             transition: .3s;
         }
 
-            header > .top_menu > .btn_hamburger:before {
+            nav > .top_menu > .btn_hamburger:before {
                 width: 21px;
                 height: 1px;
                 border: 1px solid #fff;
@@ -62,7 +62,7 @@ header {
                 transition: .3s;
             }
 
-            header > .top_menu > .btn_hamburger:after {
+            nav > .top_menu > .btn_hamburger:after {
                 width: 21px;
                 height: 1px;
                 border: 1px solid #fff;
@@ -75,7 +75,7 @@ header {
                 transition: .3s;
             }
 
-    header > .menu {
+    nav > .menu {
         display: block;
         position: fixed;
         top: 0px;
@@ -112,31 +112,31 @@ header {
     background: #313131;
     }
 
-    header > .check_menu:checked ~ .menu {
+    nav > .check_menu:checked ~ .menu {
         right: 0px;
     }
 
-    header > .check_menu:checked ~ .top_menu > .btn_hamburger:after {
+    nav > .check_menu:checked ~ .top_menu > .btn_hamburger:after {
         transform: rotate(45deg);
         top: -2px;
     }
 
-    header > .check_menu:checked ~ .top_menu > .btn_hamburger:before {
+    nav > .check_menu:checked ~ .top_menu > .btn_hamburger:before {
         transform: rotate(-45deg);
         top: -2px;
     }
 
-    header > .check_menu:checked ~ .top_menu > .btn_hamburger {
+    nav > .check_menu:checked ~ .top_menu > .btn_hamburger {
         border: none;
         background: transparent;
     }
 
-    header > .check_menu {
+    nav > .check_menu {
         display: none;
     }
 
 @media screen and (min-width: 700px) {
-    header > .menu {
+    nav > .menu {
         margin-top: 0px;
         right: 0;
         z-index: 5;
@@ -145,7 +145,7 @@ header {
         border-left: none;
        }
 
-    header > .logo {
+    nav > .logo {
         left: 10%;
         top: 5px;
     }
@@ -189,13 +189,13 @@ header {
 
 /*mini version*/
 @media screen and (max-width: 699px) {
-    header > .menu {
+    nav > .menu {
         background:rgba(0,0,0,0.91);
         transition: right .3s;
      
     }
 
-    header > .check_menu:checked ~ .menu {
+    nav > .check_menu:checked ~ .menu {
         right: 0px;
     }
 
