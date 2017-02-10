@@ -1,14 +1,26 @@
 .r_b{
-    animation: r_bang 1.1s;
+	animation: r_bang 1.1s;
     display: inline-block;
+}
+.r_d{
+    animation: r_drop 1s;
+    display: inline-block;
+    position:relative;
 }
 .r_l{
-    animation: r_locomotive 1s;
+	animation: r_left 1s;
     display: inline-block;
     transform-origin: 0 0 0;
+    position:relative;
+}
+.r_r{
+	animation: r_right 1s;
+    display: inline-block;
+    transform-origin: 0 0 0;
+    position:relative;
 }
 .r_s{
-    animation: r_show 1.2s;
+	animation: r_show 1.2s;
     display: inline-block;
 }
 @keyframes r_bang {
@@ -28,6 +40,71 @@
 		transform: scale(1);
 	}
 }
+@keyframes r_drop{
+    0% {
+        top: -100%;
+        opacity:0;
+        transform:scale(0.1);
+    }
+    50%{
+        opacity:1;
+    }
+    60%{
+        top: 0;
+    }
+    100%{
+        transform:scale(1);
+        top:0;
+    }
+}
+@keyframes r_left{
+    0% {
+        -ms-transform: rotateX(90deg);
+        -webkit-transform: rotateX(90deg);
+        -o-transform: rotateX(90deg);
+        -moz-transform: rotateX(90deg);
+        transform: rotateX(90deg);
+        left: -50%;
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    90%{
+         -ms-transform: rotateX(0deg);
+        -webkit-transform: rotateX(0deg);
+        -o-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+    100%{
+        left: 0;
+    }
+}
+@keyframes r_right{
+    0% {
+        -ms-transform: rotateX(90deg);
+        -webkit-transform: rotateX(90deg);
+        -o-transform: rotateX(90deg);
+        -moz-transform: rotateX(90deg);
+        transform: rotateX(90deg);
+        right: -50%;
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    90%{
+         -ms-transform: rotateX(0deg);
+        -webkit-transform: rotateX(0deg);
+        -o-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+    100%{
+        right: 0;
+    }
+}
 @keyframes r_show {
 	0% {
 		transform: scale(21);
@@ -45,20 +122,4 @@
 	100% {
 		transform: scale(1);
 	}
-}
-@keyframes r_locomotive{
-    0% {
-        transform: rotateX(90deg);
-        margin-left: -50%;
-        opacity:0;
-    }
-    50%{
-        opacity:1;
-    }
-    90%{
-        transform: rotateX(0deg);
-    }
-    100%{
-        margin-left: 0;
-    }
 }
