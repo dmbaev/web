@@ -1,30 +1,31 @@
 /*Animation fro your site v0.1beta*/
-.r_b{
-	animation: r_bang 1.1s;
+
+.rachel.r_bang{
+	animation: _r_bang 1.1s;
     display: inline-block;
 }
-.r_d{
-    animation: r_drop 1s;
+.rachel.r_drop{
+    animation: _r_drop 1s;
     display: inline-block;
     position:relative;
 }
-.r_l{
-	animation: r_left 1s;
+.rachel.r_left{
+	animation: _r_left 1s;
     display: inline-block;
     transform-origin: 0 0 0;
     position:relative;
 }
-.r_r{
-	animation: r_right 1s;
+.rachel.r_right{
+	animation: _r_right 1s;
     display: inline-block;
     transform-origin: 0 0 0;
     position:relative;
 }
-.r_s{
-	animation: r_show 1.2s;
+.rachel.r_show{
+	animation: _r_show 1.2s;
     display: inline-block;
 }
-@keyframes r_bang {
+@keyframes _r_bang {
 	0% {
 		transform: scale(0);
 	}
@@ -41,7 +42,7 @@
 		transform: scale(1);
 	}
 }
-@keyframes r_drop{
+@keyframes _r_drop{
     0% {
         top: -100%;
         opacity:0;
@@ -58,7 +59,7 @@
         top:0;
     }
 }
-@keyframes r_left{
+@keyframes _r_left{
     0% {
         -ms-transform: rotateX(90deg);
         -webkit-transform: rotateX(90deg);
@@ -82,7 +83,7 @@
         left: 0;
     }
 }
-@keyframes r_right{
+@keyframes _r_right{
     0% {
         -ms-transform: rotateX(90deg);
         -webkit-transform: rotateX(90deg);
@@ -106,7 +107,7 @@
         right: 0;
     }
 }
-@keyframes r_show {
+@keyframes _r_show {
 	0% {
 		transform: scale(21);
 		opacity: 0;
