@@ -1,0 +1,84 @@
+span {
+  font-size:90px;
+  color: red;
+  position: fixed;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  isplay: block;
+}
+
+span:before{
+    content: "";
+    left: 0;
+    top: 0;
+    height: 5px;
+    width: 0px;
+    background: rgba(255, 28, 28, 0.59);
+    position: fixed;
+    display: block;
+    animation: war1 10s infinite;
+}
+
+@keyframes war1 {
+    0% {
+        height: 5px;
+        width: 5px;     
+    }
+    12%{
+      width: 100%;
+      left :0;
+    }  
+    24% {
+     left: calc(100% - 5px);
+     width: 5px;  
+     height: 5px;
+    }
+    25%{
+    height: 5px;
+    top: 0;
+    }
+    37%{
+    
+    height: 100%;
+    top:0;
+    }
+    49%{
+    top:calc(100% - 5px) ;
+    left: calc(100% - 5px);
+    height:5px;
+    width: 5px; 
+    }
+    50%{
+    width: 0 px;
+    
+    }
+    62%{
+    width: 100%;
+      left :0;
+      height: 5px;
+       top:calc(100% - 5px) ;
+    }
+    74%{
+    width: 5px;
+      left :0;
+      height: 5px;
+       top:calc(100% - 5px) ;
+    }
+    75%{
+        width: 5px;
+      left :0;
+      height: 5px;
+      top:calc(100% - 5px) ;
+    }
+    87%{
+    height: 100%;
+    top: 0;
+    width: 5px;
+    }
+    100%{
+     left :0;
+        top: 0;
+      height: 5px;
+        width: 5px;
+    }
+  }
