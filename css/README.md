@@ -1,2 +1,0 @@
-# web
-css html javascript
